@@ -44,8 +44,7 @@ do
     	    # Go to current directory
 	        cd $i
 	        # Get subject name
-	        #Subject=${PWD##*/}
-			Subject=28801
+	        Subject=${PWD##*/}
 			echo "-------------------------------"	
 	   		echo "Processing" $Subject
 			echo "-------------------------------"	
