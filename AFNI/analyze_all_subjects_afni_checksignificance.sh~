@@ -5,7 +5,10 @@ Study=Beijing
 
 Design=boxcar10_REML
 
-#ClusterDefiningThresholdP=0.01 
+# z-value of 2.326 corresponds to p = 0.01 (one sided)
+# z-value of 3.086 corresponds to p = 0.001 (one sided)
+
+#ClusterDefiningThresholdP=0.01
 #ClusterDefiningThreshold=2.365
 #CDT=2.3
 

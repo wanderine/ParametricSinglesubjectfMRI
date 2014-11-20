@@ -5,7 +5,7 @@ Study=Beijing
 
 Design=boxcar10_REML
 
-start_directory=/home/andek/Research_projects/SingleSubject
+start_directory=/home/andek/Research_projects/RandomGroupAnalyses
 
 #for Smooth in 1 2 3 4
 for Smooth in 2
@@ -43,9 +43,9 @@ do
 	        # Go back to original directory
 	        cd $start_directory
 
-			3dAFNItoNIFTI -prefix $start_directory/Results/${Study}/${Smoothing}/${Design}/${Subject}.results/whitened_residuals.nii.gz $start_directory/Results/${Study}/${Smoothing}/${Design}/${Subject}.results/whitened_errts.${Subject}_REML+tlrc
-	
-			3dAFNItoNIFTI -prefix $start_directory/Results/${Study}/${Smoothing}/${Design}/${Subject}.results/mask.nii.gz $start_directory/Results/${Study}/${Smoothing}/${Design}/${Subject}.results/mask_group+tlrc 
+			rm $start_directory/Results/${Study}/${Smoothing}/${Design}/${Subject}.results/activity_map.nii.gz
+
+			3dcalc -a "Results/${Study}/${Smoothing}/${Design}/${Subject}.results/stats.${Subject}_REML+tlrc[2]" -b "Results/${Study}/${Smoothing}/${Design}/${Subject}.results/full_mask.${Subject}+tlrc" -expr 'step(b)*a' -prefix $start_directory/Results/${Study}/${Smoothing}/${Design}/${Subject}.results/activity_map.nii.gz
 
 	    else
 			echo "This directory does not contain any fMRI data!"

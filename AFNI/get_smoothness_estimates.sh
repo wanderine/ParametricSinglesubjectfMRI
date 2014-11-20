@@ -5,10 +5,10 @@ Study=Beijing
 
 Design=boxcar10_REML
 
-start_directory=/home/andek/Research_projects/RandomGroupAnalyses
+start_directory=/home/andek/Research_projects/SingleSubject
 
 #for Smooth in 1 2 3 4
-for Smooth in 1
+for Smooth in 2
 do
 
 	if [ "$Smooth" -eq "1" ]; then
