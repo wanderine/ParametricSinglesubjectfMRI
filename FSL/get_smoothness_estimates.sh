@@ -35,7 +35,7 @@ do
 		Smoothing=16mm
 	fi
 
-	results_directory=/home/andek/Research_projects/RandomGroupAnalyses/Results/${Study}/${Smoothing}/${Design}
+	results_directory=/home/andek/Research_projects/SingleSubject/Results/${Study}/${Smoothing}/${Design}
 
 	Significant=0
 	Subjects=0
@@ -57,9 +57,9 @@ do
 			cd $design_directory
 
 			# Get smoothness 
-			text=`smoothest -d ${DF} -m /home/andek/Research_projects/RandomGroupAnalyses/Results/${Study}/${Smoothing}/${Design}/${Subject}.feat/mask.nii.gz -r /home/andek/Research_projects/RandomGroupAnalyses/Results/${Study}/${Smoothing}/${Design}/${Subject}.feat/stats/res4d.nii.gz -V`
+			text=`smoothest -d ${DF} -m /home/andek/Research_projects/SingleSubject/Results/${Study}/${Smoothing}/${Design}/${Subject}.feat/mask.nii.gz -r /home/andek/Research_projects/SingleSubject/Results/${Study}/${Smoothing}/${Design}/${Subject}.feat/stats/res4d.nii.gz -V`
 
-			#smoothest -d ${DF} -m /home/andek/Research_projects/RandomGroupAnalyses/Results/${Study}/${Smoothing}/${Design}/${Subject}.feat/mask.nii.gz -r /home/andek/Research_projects/RandomGroupAnalyses/Results/${Study}/${Smoothing}/${Design}/${Subject}.feat/stats/res4d.nii.gz -V
+			#smoothest -d ${DF} -m /home/andek/Research_projects/SingleSubject/Results/${Study}/${Smoothing}/${Design}/${Subject}.feat/mask.nii.gz -r /home/andek/Research_projects/SingleSubject/Results/${Study}/${Smoothing}/${Design}/${Subject}.feat/stats/res4d.nii.gz -V
 
 			temp=${text[$((0))]}
 			values=()
@@ -67,7 +67,7 @@ do
 			xsmoothness=${values[$((106))]}
 
 			#echo $temp
-			echo "$xsmoothness" >> /home/andek/Research_projects/RandomGroupAnalyses/Results/smoothnessestimates_${Study}.txt 
+			echo "$xsmoothness" >> /home/andek/Research_projects/SingleSubject/Results/smoothnessestimates_${Study}.txt 
 			
 	    fi
 

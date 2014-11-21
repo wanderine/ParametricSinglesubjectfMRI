@@ -19,7 +19,7 @@ BoxcarOnNew="set fmri(on1) 10"
 # Highpass filter cutoff (twice boxcar length)
 HighPassNew="set fmri(paradigm_hp) 20" #60 for 30 seconds on off, 20 for 10 seconds on off
 
-design_directory=/home/andek/Research_projects/RandomGroupAnalyses
+design_directory=/home/andek/Research_projects/SingleSubject
 
 for Smoothing in 3 4 5 6 7 ; do
 #for Smoothing in 1 2 3 4 5 6 7 ; do

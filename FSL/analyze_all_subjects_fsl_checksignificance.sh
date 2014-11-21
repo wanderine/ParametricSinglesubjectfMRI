@@ -34,7 +34,7 @@ do
 		Smoothing=16mm
 	fi
 
-	results_directory=/home/andek/Research_projects/RandomGroupAnalyses/Results/${Study}/${Smoothing}/${Design}
+	results_directory=/home/andek/Research_projects/SingleSubject/Results/${Study}/${Smoothing}/${Design}
 
 	Significant=0
 	Subjects=0
@@ -88,7 +88,7 @@ do
 
 	echo "Out of $Subjects analyses for $Smoothing smoothing, significant activation was detected $Significant times !"
 
-	echo "Out of $Subjects analyses, significant activation was detected $Significant times !" > /home/andek/Research_projects/RandomGroupAnalyses/Results/results_fsl_singlesubject_${Study}_${Design}_${Smoothing}_${CDT}.txt
+	echo "Out of $Subjects analyses, significant activation was detected $Significant times !" > /home/andek/Research_projects/SingleSubject/Results/results_fsl_singlesubject_${Study}_${Design}_${Smoothing}_${CDT}.txt
 
 done
 
