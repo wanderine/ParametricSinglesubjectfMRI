@@ -14,11 +14,11 @@ for subject = 1:198
 
     subjectString = subjects(subject+10).name
     
-    data = load_nii(['/home/andek/Research_projects/RandomGroupAnalyses/Results/Beijing/6mm/boxcar10_REML/' subjectString '.results/whitened_residuals.nii.gz']);
+    data = load_nii(['/home/andek/Research_projects/SingleSubject/Results/Beijing/6mm/boxcar10_REML/' subjectString '.results/whitened_residuals.nii.gz']);
     data = data.img;
     data = double(data);
     
-    mask = load_nii(['/home/andek/Research_projects/RandomGroupAnalyses/Results/Beijing/6mm/boxcar10_REML/' subjectString '.results/mask.nii.gz']);
+    mask = load_nii(['/home/andek/Research_projects/SingleSubject/Results/Beijing/6mm/boxcar10_REML/' subjectString '.results/mask.nii.gz']);
     mask = mask.img;
     mask = double(mask);
 
